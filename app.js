@@ -33,18 +33,22 @@ var createNewTaskElement=function(taskString){
   var deleteButtonImg=document.createElement("img");//delete button image
 
   label.innerText=taskString;
-  label.className="todo-name";
+  label.className="todo-name label";
+
+  listItem.className="todo-item";
 
   //Each elements, needs appending
   checkBox.type="checkbox";
+  checkBox.className="input-checkbox";
   editInput.type="text";
-  editInput.className="todo-name";
+  editInput.className="todo-name input-hidden";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit";
+  editButton.className="btn edit";
 
-  deleteButton.className="del";
+  deleteButton.className="del btn";
   deleteButtonImg.src="./remove.svg";
+  deleteButtonImg.className="btn-del-img";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -90,9 +94,12 @@ var editTask=function(){
 
     //switch to .todo-edit-mode
     //label becomes the inputs value.
+    label.classList.remove("label-hidden");
     label.innerText=editInput.value;
     editBtn.innerText="Edit";
   }else{
+    label.classList.add("label-hidden");
+    editInput.className="input-hidden todo-name todo-text todo-edit input-content";
     editInput.value=label.innerText;
     editBtn.innerText="Save";
   }
@@ -120,6 +127,7 @@ var taskCompleted=function(){
 
   //Append the task list item to the #completed-todo
   var listItem=this.parentNode;
+  listItem.children[1].classList.add("label-through");
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
