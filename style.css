@@ -19,7 +19,8 @@
 
 @media (max-width:768px) {
 
-  .wrap-main-img { text-align: center;
+  .wrap-main-img {
+    text-align: center;
   }
 
 }
@@ -40,10 +41,12 @@ ul {
   margin: 0;
   padding: 0px;
 }
-li, h3 {
+li,
+h3 {
   list-style: none;
 }
-input,button{
+input,
+button {
   outline: none;
 }
 .btn {
@@ -116,7 +119,7 @@ input,button{
   font-size: 18px;
   width: 226px;
 }
-.todo-item >  .todo-text {
+.todo-item > .todo-text {
   width: 226px;
 }
 .del .btn-del-img {
