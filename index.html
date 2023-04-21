@@ -6,55 +6,59 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="page">
-    <div class="wrap-main-img">
+    <header class="wrap-main-img">
       <img class="img" src="./eisenhower-matrix.jpg">
       <a  class="main-img-link"
           href="https://goal-life.com/page/method/matrix-eisenhower">
           Want more details?
       </a>
-    </div>
-    <div class="content">
-      <p id="todo-add-wrap">
-        <label class="title title-label label" for="todo-add-input">Add Item</label>
+    </header>
+    <main class="content">
+      <section id="todo-add-wrap">
+        <h1 class="title title-label label">Add Item</h1>
         <div class="todo-add-input-wrap">
-          <input id="todo-add-input"class="todo-name todo-text input-content" type="text">
+          <input id="todo-add-input" class="todo-name todo-text input-content" type="text">
           <button class="btn">Add</button>
         </div>
-      </p>
-      <h3 class="title">Todo</h3>
-      <ul id="incomplete-todo">
-        <li class="todo-item">
-          <input class="input-checkbox" type="checkbox">
-          <label class="todo-name label label-hidden">Pay Bills</label>
-          <input type="text" class="input-content input-hidden todo-name todo-text">
-          <button class="btn edit">Edit</button>
-          <button class="btn del">
-            <img class="btn-del-img" src="./remove.svg">
-          </button>
-        </li>
-        <li class="todo-item todo-edit-mode">
-          <input class="input-checkbox" type="checkbox">
-          <label class="todo-name label label-hidden">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="input-content input-hidden todo-name todo-text todo-edit">
-          <button class="btn edit">Save</button>
-          <button class="btn del">
-            <img class="btn-del-img" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-      <h3 class="title">Completed</h3>
-      <ul id="completed-todo">
-        <li class="todo-item">
-          <input class="input-checkbox" type="checkbox" checked>
-          <label class="todo-name label label-through label-hidden">See the Doctor</label>
-          <input type="text" class="input-hidden todo-name todo-text">
-          <button class="btn edit">Edit</button>
-          <button class="btn del">
-            <img class="btn-del-img" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
+      </section>
+      <section>
+        <h2 class="title">Todo</h2>
+        <ul id="incomplete-todo">
+          <li class="todo-item">
+            <input class="input-checkbox" type="checkbox">
+            <label class="todo-name label label-hidden">Pay Bills</label>
+            <input type="text" class="input-content input-hidden todo-name todo-text">
+            <button class="btn edit">Edit</button>
+            <button class="btn del">
+              <img class="btn-del-img" src="./remove.svg">
+            </button>
+          </li>
+          <li class="todo-item todo-edit-mode">
+            <input class="input-checkbox" type="checkbox">
+            <label class="todo-name label label-hidden">Go Shopping</label>
+            <input type="text" value="Go Shopping" class="input-content input-hidden todo-name todo-text todo-edit">
+            <button class="btn edit">Save</button>
+            <button class="btn del">
+              <img class="btn-del-img" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="title">Completed</h2>
+        <ul id="completed-todo">
+          <li class="todo-item">
+            <input class="input-checkbox" type="checkbox" checked>
+            <label class="todo-name label label-through label-hidden">See the Doctor</label>
+            <input type="text" class="input-hidden todo-name todo-text">
+            <button class="btn edit">Edit</button>
+            <button class="btn del">
+              <img class="btn-del-img" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
