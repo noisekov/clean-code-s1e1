@@ -4,22 +4,22 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-.wrap-main-img {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.img {
+.header__img {
   width: 100%;
 }
-.wrap-main-img .main-img-link {
+.header .header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .wrap-main-img {
+  .header {
     text-align: center;
   }
 
@@ -29,12 +29,12 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.todo-name {
+.todo-width {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.todo-add-input-wrap {
+.todo-add__input-wrap {
   display: flex;
 }
 ul {
@@ -71,7 +71,7 @@ button {
   margin: 0;
   text-transform: uppercase;
 }
-.input-content {
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -83,12 +83,12 @@ button {
   font-family: Lato, sans-serif;
   color: #888;
 }
-.input-content:focus {
+.input:focus {
   color: #333;
 }
 
 /* New Task */
-.title-label {
+.todo-add__title {
   display: block;
   margin: 0 0 20px;
 }
@@ -97,7 +97,7 @@ button {
 }
 
 /* Task list */
-.todo-item {
+.task__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -106,47 +106,44 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.todo-item > * {
+.task__item > * {
   vertical-align: middle;
 }
 
-.todo-item > .input-checkbox {
+.task__item > .task__checkbox {
   margin: 0 10px;
 }
-.todo-item > .label {
+.task__item > .task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.todo-item > .todo-text {
-  width: 226px;
-}
-.del .btn-del-img {
+.task__btn-del .task__btn-del-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.del .btn-del-img:hover {
+.task__btn-del .task__btn-del-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.label-through {
+.task__label--through {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.input-hidden {
+.input--hidden {
   display: none;
 }
 
-.todo-edit-mode .todo-edit {
+.task__item--edit .todo-edit {
   display: inline-block;
   width: 224px;
 }
 
-.todo-edit-mode .label-hidden {
+.task__item--edit .task__label--hidden {
   display: none;
 }
